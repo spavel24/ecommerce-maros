@@ -1,15 +1,17 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-caps.jpg";
 
 export function HeroSection() {
   return (
     <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
       
-      {/* Imagen de fondo con gradiente */}
+      {/* Video de fondo con gradiente */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Premium Caps Collection"
+        <video
+          src="/assets/hero-caps.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
@@ -22,7 +24,7 @@ export function HeroSection() {
           {/* Badge de nueva colección */}
           <div className="mb-4">
             <span className="inline-block px-3 py-1 bg-blue-600/30 backdrop-blur-sm rounded-full text-blue-400 font-medium text-sm border border-blue-500/30">
-              Nueva Colección 2024
+              Nueva Colección 2025
             </span>
           </div>
           
@@ -48,13 +50,6 @@ export function HeroSection() {
             >
               Ver Colección
             </Button>
-            { /*<Button 
-              size="lg" 
-              variant="outline" 
-              className="border-white text-white hover:bg-white hover:text-black transition-all duration-300"
-            >
-              Ofertas Especiales
-            </Button> */}
           </div>
         </div>
       </div>
